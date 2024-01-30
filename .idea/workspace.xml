@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2877b2b-6119-45f1-bdab-9298a944851e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CVwebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CVwebsite.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/img/gallery/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/img/gallery/project-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/img/gallery/project-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/img/gallery/project-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/img/gallery/project-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/img/gallery/project-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/img/gallery/project-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +59,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\statics\img\gallery" />
       <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\templates\blog" />
       <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\statics\img" />
       <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\statics\img\instagram" />
       <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\statics" />
-      <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -95,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706538721964</updated>
       <workItem from="1706538752898" duration="14579000" />
-      <workItem from="1706606446109" duration="7095000" />
+      <workItem from="1706606446109" duration="13273000" />
     </task>
     <servers />
   </component>
