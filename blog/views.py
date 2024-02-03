@@ -16,10 +16,8 @@ def blog(request):
 
 
 def single_blog(request, post_id):
-    posts = Post.objects.filter(pk=post_id,published_date__lte=timezone.now())
-    post = posts.first()
+    post = Post.objects.get(pk=post_id, published_date__lte=timezone.now())
     post.count_views += 1
     post.save()
     context = {'post': post}
     return render(request, 'blog/single-blog.html', context)
-
