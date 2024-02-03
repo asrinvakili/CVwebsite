@@ -16,7 +16,7 @@ def blog(request):
 
 
 def single_blog(request, post_id):
-    post = Post.objects.get(pk=post_id, published_date__lte=timezone.now())
+    post = Post.objects.get(pk=post_id, published_date__lte=timezone.now(), status=True)
     post.count_views += 1
     post.save()
     context = {'post': post}
