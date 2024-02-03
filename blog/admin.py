@@ -2,7 +2,7 @@ from django.contrib import admin
 
 
 # Register your models here.
-class blogAdmin(admin.ModelAdmin):
+class postAdmin(admin.ModelAdmin):
     date_hierarchy = 'public_date'
     empty_value_display = '-empty-'
     fields = ('title', 'slug', 'public_date', 'content', 'author', 'tags')

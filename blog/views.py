@@ -1,16 +1,23 @@
-from django.shortcuts import render
+from django.utils import timezone
+
+from django.shortcuts import render, get_object_or_404
+
+from blog.models import Post
 
 
 # Create your views here.
-contex = {
-    'name': 'Asrin Vakili',
-    'time': '1/30/2024',
-    'view': '2.3M Views',
-    'comment': '13 Comments'
-}
+
+
 def blog(request):
-    return render(request, 'blog/blog.html', contex)
+    posts = Post.objects.filter(published_date__lte=timezone.now())
+    post = get_object_or_404(posts)
+    contex = {'post': post}
+    return render(request, 'blog/single-blog.html', contex)
 
 
-def single_blog(request):
+def single_blog(request, pid):
+    post = get_object_or_404(Post, pk=pid)
+    post.count_views += 1
+    post.save()
+    contex = {'post': post}
     return render(request, 'blog/single-blog.html', contex)
