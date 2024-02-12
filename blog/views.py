@@ -34,8 +34,15 @@ def blog(request, **kwargs):
 def single_blog(request, post_id):
     posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
     post = get_object_or_404(posts, pk=post_id)
+    post.count_views += 1
+
+    next_post = posts[post_id+1]
+    prev_post = posts[post_id-1]
+
     context = {
-        'post': post
+        'post': post,
+        'next_post': next_post,
+        'prev_post': prev_post
     }
 
     return render(request, 'blog/single-blog.html', context)
