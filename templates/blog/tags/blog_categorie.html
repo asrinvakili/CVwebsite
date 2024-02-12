@@ -1,0 +1,22 @@
+{% load static %}
+
+<section class="blog_categorie_area">
+            <div class="container">
+                <div class="row">
+                    {% for post in posts %}
+                    <div class="col-lg-4">
+                        <div class="categories_post">
+                            <img src="{{ post.image.url }}" alt="post">
+                            <div class="categories_details">
+                                <div class="categories_text">
+                                    <a href="{% url 'blog:singleblog' post_id=1 %}"><h5>{{ post.title }}</h5></a>
+                                    <div class="border_line"></div>
+                                    <p>{{ post.content|truncatewords:6 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
