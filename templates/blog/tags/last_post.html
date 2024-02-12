@@ -4,7 +4,7 @@
                                 <h3 class="widget_title">Popular Posts</h3>
                                 {% for post in posts %}
                                 <div class="media post_item">
-                                    <img src="{{ post.image.url }}" alt="post">
+                                    <img class="img-fluid sidebar-post" src="{{ post.image.url }}" alt="post">
                                     <div class="media-body">
                                         <a href="{% url 'blog:weblog' %}"><h3>{{ post.title }}</h3></a>
                                         <p>{{ post.published_date|date:'Dd M Y' }}</p>
