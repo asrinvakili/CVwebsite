@@ -12,7 +12,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 def blog(request, **kwargs):
-    posts = Post.objects.filter(status=1, published_date__lte=timezone.now())
+    posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
     if kwargs.get('cat_name') is not None:
         posts = posts.filter(category__name=kwargs['cat_name'])
     if kwargs.get('author_user') is not None:
@@ -36,8 +36,14 @@ def single_blog(request, post_id):
     post = get_object_or_404(posts, pk=post_id)
     post.count_views += 1
 
-    next_post = posts[post_id+1]
-    prev_post = posts[post_id-1]
+    if post_id < len(posts):
+        next_post = posts[post_id + 1]
+    else:
+        next_post = None
+    if post_id > 1:
+        prev_post = posts[post_id - 1]
+    else:
+        prev_post = None
 
     context = {
         'post': post,

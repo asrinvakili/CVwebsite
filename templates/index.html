@@ -1,4 +1,5 @@
 {%  extends 'base.html' %}
+{% load blog_tag %}
 {% load static %}
 {% block base %}
         
@@ -297,41 +298,20 @@
         	</div>
         </section>
         <!--================End Home Gallery Area =================-->
-        
-        <!--================In the near future Area =================-->
         <section class="testimonials_area p_120">
         	<div class="container">
         		<div class="main_title">
-        			<h2>In the near future</h2>
-        			<p>I am currently taking a series of specialized courses. My plans for the future are as follows.</p>
+        			<h2>Latest from Our Blog</h2>
+        			<p>With the exception of Nietzsche, no other madman has contributed so much to human sanity as has</p>
         		</div>
         		<div class="testi_inner">
 					<div class="testi_slider owl-carousel">
-						<div class="item">
-							<div class="testi_item">
-								<p>I plan to create a website that will extract information about all currencies from all the sites related to the introduction of digital currencies. According to the fundamental and technical information, introduce digital currencies with high potential for investment.</p>
-								<h4>Finding digital currencies</h4>
-
-							</div>
-						</div>
-						<div class="item">
-							<div class="testi_item">
-								<p>By taking various Python courses, I plan to become a professional Python programmer. For this reason, I have attended advanced Python courses and practice 8 hours a day.</p>
-								<h4>Become a Senior Python Developer</h4>
-
-							</div>
-						</div>
-						<div class="item">
-							<div class="testi_item">
-								<p>AOne of my favorite dead topics is machine learning. Machine learning is a subset of artificial intelligence. I am trying to become a machine learning programmer.</p>
-								<h4>Machin Learning</h4>
-
-							</div>
-						</div>
+                     {% home_blog %}
 					</div>
         		</div>
         	</div>
         </section>
-        <!--================End In the near future Area =================-->
+        <!--================End Testimonials Area =================-->
+
         
 {% endblock %}

@@ -1,10 +1,7 @@
-{% load static %}
 
-<section class="blog_categorie_area">
-            <div class="container">
-                <div class="row">
+
                     {% for post in posts %}
-                    <div class="col-lg-4">
+
                         <div class="categories_post">
                             <img src="{{ post.image.url }}" alt="post">
                             <div class="categories_details">
@@ -12,11 +9,29 @@
                                     <a href="{% url 'blog:singleblog' post_id=post.id %}"><h5>{{ post.title }}</h5></a>
                                     <div class="border_line"></div>
                                     <p>{{ post.content|truncatewords:6 }}</p>
+                                    <div class="border_line"></div>
+                                    <ul class="categories">
+                                        {% for cat in post.category.all %}
+                                        <li>
+                                            <a href="{% url 'blog:category' cat_name=cat.name %}" class="d-flex justify-content-between">
+                                                <p>{{ cat.name }}</p>
+                                            </a>
+                                        </li>
+                                             {% endfor %}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                     {% endfor %}
-                </div>
-            </div>
-        </section>
+
+
+
+
+
+
+
+
+
+
+

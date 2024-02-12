@@ -6,7 +6,7 @@
                                 <div class="media post_item">
                                     <img class="img-fluid sidebar-post" src="{{ post.image.url }}" alt="post">
                                     <div class="media-body">
-                                        <a href="{% url 'blog:weblog' %}"><h3>{{ post.title }}</h3></a>
+                                        <a href="{% url 'blog:singleblog' post_id=post.id %}"><h3>{{ post.title }}</h3></a>
                                         <p>{{ post.published_date|date:'Dd M Y' }}</p>
                                     </div>
                                 </div>
