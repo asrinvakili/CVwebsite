@@ -1,0 +1,15 @@
+
+{% load static %}
+<aside class="single_sidebar_widget search_widget">
+    <div class="input-group">
+        <form class="search-form" action="{% url 'blog:search' %}" method="get">
+            <label>
+                <input class="form-control" placeholder="Search Posts" name="s" type="text" >
+            </label>
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default"><i class="lnr lnr-magnifier"></i></button>
+            </span>
+        </form>
+    </div>
+    <div class="br"></div>
+</aside>

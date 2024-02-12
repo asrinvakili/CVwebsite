@@ -9,30 +9,29 @@ from blog.models import Post
 # Create your views here.
 
 
-def blog(request, cat_name=None):
-    posts = Post.objects.filter(status=1)
-    if cat_name:
-        posts = posts.filter(category__name=cat_name)
+def blog(request, **kwargs):
+    posts = Post.objects.filter(status=1, published_date__lte=timezone.now())
+    if kwargs.get('cat_name') is not None:
+        posts = posts.filter(category__name=kwargs['cat_name'])
+    if kwargs.get('author_user') is not None:
+        posts = posts.filter(author__username=kwargs['author_user'])
     context = {'posts': posts}
     return render(request, 'blog/blog.html', context)
 
 
 def single_blog(request, post_id):
-    all_posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
-    current_post = get_object_or_404(Post, pk=post_id)
-
-    current_index = list(all_posts).index(current_post)
-
-    next_index = current_index + 1 if current_index < len(all_posts) - 1 else None
-    prev_index = current_index - 1 if current_index > 0 else None
-
-    next_post = all_posts[next_index] if next_index is not None else None
-    prev_post = all_posts[prev_index] if prev_index is not None else None
-
+    posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
+    post = get_object_or_404(posts, pk=post_id)
     context = {
-        'post': current_post,
-        'next_post': next_post,
-        'prev_post': prev_post,
+        'post': post
     }
 
     return render(request, 'blog/single-blog.html', context)
+
+
+def blog_search(request):
+    posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
+    if request.method == 'GET':
+        posts = posts.filter(content__contains=request.GET.get('s'))
+    context = {'posts': posts}
+    return render(request, 'blog/blog.html', context)
