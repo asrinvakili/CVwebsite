@@ -5,6 +5,8 @@ from django.shortcuts import render, get_object_or_404
 
 from blog.models import Post
 
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
 
 # Create your views here.
 
@@ -15,6 +17,16 @@ def blog(request, **kwargs):
         posts = posts.filter(category__name=kwargs['cat_name'])
     if kwargs.get('author_user') is not None:
         posts = posts.filter(author__username=kwargs['author_user'])
+
+    posts = Paginator(posts, 3)
+    try:
+        page_numb = request.GET.get('page')
+        posts = posts.get_page(page_numb)
+    except PageNotAnInteger:
+        posts = posts.get_page(1)
+    except EmptyPage:
+        posts = posts.get_page(1)
+
     context = {'posts': posts}
     return render(request, 'blog/blog.html', context)
 
