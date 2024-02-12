@@ -9,8 +9,10 @@ from blog.models import Post
 # Create your views here.
 
 
-def blog(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now())
+def blog(request, cat_name=None):
+    posts = Post.objects.filter(status=1)
+    if cat_name:
+        posts = posts.filter(category__name=cat_name)
     context = {'posts': posts}
     return render(request, 'blog/blog.html', context)
 

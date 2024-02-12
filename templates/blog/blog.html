@@ -1,5 +1,6 @@
 {%  extends 'base.html' %}
 {% load static %}
+{% load blog_tag %}
 {% block base %}
 
         <!--================Blog Categorie Area =================-->
@@ -59,7 +60,7 @@
                                    <div class="blog_info text-right">
                                         <div class="post_tag">
                                         {% for cat in post.category.all %}
-                                            <a href="#">{{ cat.name }}</a>{% if not forloop.last %},{% endif %}
+                                            <a href="{% url 'blog:category' cat_name=cat.name %}">{{ cat.name }}</a>{% if not forloop.last %},{% endif %}
                                         {% endfor %}
                                         </div>
                                         <ul class="blog_meta list">
@@ -111,6 +112,8 @@
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             {% include 'blog/temp.html' %}
+                            {% last_post %}
+                            {% post_categories %}
 
 
                         </div>
