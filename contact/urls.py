@@ -5,4 +5,5 @@ app_name = 'contact'
 
 urlpatterns = [
     path('', contact, name='contactUs'),
+
 ]

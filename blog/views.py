@@ -35,7 +35,6 @@ def single_blog(request, post_id):
     posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
     post = get_object_or_404(posts, pk=post_id)
     post.count_views += 1
-
     if post_id < len(posts):
         next_post = posts[post_id + 1]
     else:

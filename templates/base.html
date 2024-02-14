@@ -76,6 +76,13 @@
 				</div>
             </div>
         </section>
+        <div id="messages">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+        </div>
         <!--================End Home Banner Area =================-->
 
     {% block base %}
