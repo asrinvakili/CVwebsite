@@ -7,9 +7,6 @@
     <list default="true" id="f2877b2b-6119-45f1-bdab-9298a944851e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CVwebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/single-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/single-blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/tags/last_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/tags/last_post.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,7 @@
       <workItem from="1706966856969" duration="25117000" />
       <workItem from="1707733521898" duration="36095000" />
       <workItem from="1708039562873" duration="731000" />
-      <workItem from="1708530353133" duration="5290000" />
+      <workItem from="1708530353133" duration="6078000" />
     </task>
     <servers />
   </component>
