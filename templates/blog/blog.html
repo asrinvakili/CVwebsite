@@ -2,6 +2,7 @@
 {% load static %}
 {% load blog_tag %}
 {% block base %}
+{% load humanize %}
 
         <!--================Blog Categorie Area =================-->
       {% blog_last_posts %}
@@ -24,7 +25,7 @@
                                         </div>
                                         <ul class="blog_meta list">
                                             <li><a href="{% url 'blog:author' author_user=post.author.username %}">{{ post.author }}<i class="lnr lnr-user"></i></a></li>
-                                            <li><a href="#">{{ post.created_date|date:'D d M Y' }}<i class="lnr lnr-calendar-full"></i></a></li>
+                                            <li><a href="#">{{ post.created_date|naturaltime}}<i class="lnr lnr-calendar-full"></i></a></li>
                                             <li><a href="#">{{ post.count_views }} Views<i class="lnr lnr-eye"></i></a></li>
                                         </ul>
                                     </div>
