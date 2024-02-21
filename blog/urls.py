@@ -1,6 +1,8 @@
 from django.urls import path
 from blog.views import blog, single_blog
+from blog.sitemap import BlogSitemap
 
+sitemaps = {'blog': BlogSitemap}
 app_name = 'blog'
 
 urlpatterns = [

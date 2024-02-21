@@ -17,7 +17,12 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
+from home.sitemap import StaticViewSitemap
+from django.views.generic.base import TemplateView
+
+sitemaps = {'static': StaticViewSitemap, }
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +30,8 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
+    path('robots.txt', include('robots.urls'),),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
