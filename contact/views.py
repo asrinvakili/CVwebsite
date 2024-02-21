@@ -1,6 +1,7 @@
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from contact.forms import contact_form
+from contact.forms import contact_form, NewsLetterForm
 
 
 # Create your views here.
@@ -20,4 +21,10 @@ def contact(request):
     return render(request, 'contact.html', {'form': form})
 
 
+def news_view(request):
+    if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
 
