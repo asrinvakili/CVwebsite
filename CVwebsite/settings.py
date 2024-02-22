@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 SITE_ID = 1
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,3 +145,4 @@ ROBOTS_USE_SCHEME_IN_HOST = True
 ROBOTS_SITEMAP_URLS = [
     'http://127.0.0.1:8000/sitemap.xml',
 ]
+

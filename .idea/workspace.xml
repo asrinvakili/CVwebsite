@@ -8,9 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CVwebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CVwebsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +113,8 @@
       <workItem from="1708550373549" duration="1251000" />
       <workItem from="1708551635745" duration="732000" />
       <workItem from="1708604918430" duration="4750000" />
+      <workItem from="1708616235180" duration="1628000" />
+      <workItem from="1708617876030" duration="2877000" />
     </task>
     <servers />
   </component>

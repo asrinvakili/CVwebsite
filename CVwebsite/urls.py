@@ -20,7 +20,6 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 from home.sitemap import StaticViewSitemap
-from django.views.generic.base import TemplateView
 
 sitemaps = {'static': StaticViewSitemap, }
 
