@@ -17,6 +17,8 @@ def blog(request, **kwargs):
         posts = posts.filter(category__name=kwargs['cat_name'])
     if kwargs.get('author_user') is not None:
         posts = posts.filter(author__username=kwargs['author_user'])
+    if kwargs.get('tag_name') is not None:
+        posts = posts.filter(tags__name__in=kwargs['tag_name'])
 
     posts = Paginator(posts, 3)
     try:

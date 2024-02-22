@@ -1,5 +1,5 @@
 from audioop import reverse
-
+from taggit.managers import TaggableManager
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -24,6 +24,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
     status = models.BooleanField(default=False)
     count_views = models.IntegerField(default=0)
+    tags = TaggableManager()
 
     class Meta:
         ordering = ['-created_date']
