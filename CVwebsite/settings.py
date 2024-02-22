@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'robots',
     'taggit',
+    'django_summernote',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
     'blog.apps.BlogConfig',

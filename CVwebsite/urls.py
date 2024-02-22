@@ -30,7 +30,8 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
-    path('robots.txt', include('robots.urls'),),
+    path('robots.txt', include('robots.urls'), ),
+    path('summernote/', include('django_summernote.urls'), ),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
