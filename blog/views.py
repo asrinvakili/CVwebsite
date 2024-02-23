@@ -3,7 +3,8 @@ from django.utils import timezone
 
 from django.shortcuts import render, get_object_or_404
 
-from blog.models import Post
+from blog.forms import CommentForm
+from blog.models import Post, Comment
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -34,6 +35,14 @@ def blog(request, **kwargs):
 
 
 def single_blog(request, post_id):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            print('u')
+
+    else:
+        form = CommentForm()
     posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
     post = get_object_or_404(posts, pk=post_id)
     post.count_views += 1
@@ -46,10 +55,13 @@ def single_blog(request, post_id):
     else:
         prev_post = None
 
+    comments = Comment.objects.filter(approved=True, post=post.id)
     context = {
         'post': post,
         'next_post': next_post,
-        'prev_post': prev_post
+        'prev_post': prev_post,
+        'comments': comments,
+        'form': form,
     }
 
     return render(request, 'blog/single-blog.html', context)

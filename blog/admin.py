@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from blog.models import Post, Category
+from blog.models import Post, Category, Comment
 
 
 # Register your models here.
@@ -18,5 +18,10 @@ class categoryAdmin(admin.ModelAdmin):
     fields = 'name'
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'subject', 'message', 'created_date', 'updated_date')
+
+
 admin.site.register(Post, postAdmin)
 admin.site.register(Category)
+admin.site.register(Comment, CommentAdmin)
