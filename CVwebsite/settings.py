@@ -66,12 +66,14 @@ INSTALLED_APPS = [
     'django_extensions',
     'robots',
     'taggit',
+    'crispy_forms',
+
     'django_summernote',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
     'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
-
+    'captcha',
 
 ]
 
@@ -173,4 +175,15 @@ ROBOTS_SITEMAP_URLS = [
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_USE_LOCALTIME = False
 EMAIL_FILE_PATH = BASE_DIR / 'emails'
+
+CAPTCHA_FONT_SIZE = 24
+CAPTCHA_LETTER_ROTATION = (-10, 10)
+CAPTCHA_BACKGROUND_COLOR = '#ffffff'
+CAPTCHA_FOREGROUND_COLOR = '#000000'
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+
 LOGIN_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
