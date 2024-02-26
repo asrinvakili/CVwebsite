@@ -29,6 +29,8 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
+
+    path('accounts/', include('allauth.urls')),
     path('robots.txt', include('robots.urls'), ),
     path('summernote/', include('django_summernote.urls'), ),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),

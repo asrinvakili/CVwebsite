@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f2877b2b-6119-45f1-bdab-9298a944851e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templatetags/blog_tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templatetags/blog_tag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CVwebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CVwebsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/single-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/single-blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -52,6 +50,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/asrin/Desktop/djangoProject/CVwebsite&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -117,7 +116,9 @@
       <workItem from="1708551635745" duration="732000" />
       <workItem from="1708604918430" duration="4750000" />
       <workItem from="1708616235180" duration="1628000" />
-      <workItem from="1708617876030" duration="9443000" />
+      <workItem from="1708617876030" duration="12298000" />
+      <workItem from="1708720761836" duration="2481000" />
+      <workItem from="1708788229160" duration="15083000" />
     </task>
     <servers />
   </component>
