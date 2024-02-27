@@ -20,17 +20,12 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 from home.sitemap import StaticViewSitemap
-from captcha.views import captcha_refresh
-
 
 sitemaps = {'static': StaticViewSitemap, }
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('captcha/', include('captcha.urls')),
-    path('captcha/refresh/', captcha_refresh, name='captcha-refresh'),
     path('about/', include('about.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
