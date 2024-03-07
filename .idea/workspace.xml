@@ -6,13 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f2877b2b-6119-45f1-bdab-9298a944851e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CVwebsite/seting/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CVwebsite/seting/dev.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CVwebsite/seting/prod.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CVwebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CVwebsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CVwebsite/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVwebsite/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/single-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/single-blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/temp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/temp.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/asrin/Desktop/djangoProject/CVwebsite&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/asrin/Desktop/djangoProject/CVwebsite",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asrin\Desktop\djangoProject\CVwebsite\CVwebsite" />
@@ -74,6 +78,7 @@
   <component name="RunManager">
     <configuration name="CVwebsite" type="Python.DjangoServer" factoryName="Django server">
       <module name="CVwebsite" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -96,6 +101,13 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,6 +137,7 @@
       <workItem from="1708964999582" duration="8942000" />
       <workItem from="1708974743977" duration="1076000" />
       <workItem from="1709046953459" duration="3011000" />
+      <workItem from="1709800377353" duration="1633000" />
     </task>
     <servers />
   </component>
