@@ -15,9 +15,14 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = 'django-insecure-8sxmvqyf2iwf^fbuyu3f6-c9ham_38^t1@yh#p2&^u7^qv8x&='
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
+ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
@@ -48,10 +53,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'django.contrib.sites',
+    "allauth_ui",
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
+    "widget_tweaks",
     'django.contrib.sitemaps',
     'django_extensions',
     'robots',
@@ -97,7 +104,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'CVwebsite.wsgi.application'
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -133,7 +145,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = BASE_DIR / 'static'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'statics'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -149,7 +166,6 @@ ROBOTS_SITEMAP_URLS = [
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_USE_LOCALTIME = False
 EMAIL_FILE_PATH = BASE_DIR / 'emails'
-
 
 LOGIN_REDIRECT_URL = '/'
 
@@ -193,4 +209,3 @@ SUMMERNOTE_CONFIG = {
         ],
     },
 }
-
