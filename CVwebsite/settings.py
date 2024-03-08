@@ -164,6 +164,18 @@ ROBOTS_SITEMAP_URLS = [
     'http://127.0.0.1:8000/sitemap.xml',
 ]
 
+ACCOUNT_FORMS = {
+    'add_email': 'allauth.account.forms.AddEmailForm',
+    'change_password': 'allauth.account.forms.ChangePasswordForm',
+    'login': 'allauth.account.forms.LoginForm',
+    'reset_password': 'allauth.account.forms.ResetPasswordForm',
+    'reset_password_from_key': 'allauth.account.forms.ResetPasswordKeyForm',
+    'set_password': 'allauth.account.forms.SetPasswordForm',
+    'signup': 'allauth.account.forms.SignupForm',
+    'user_token': 'allauth.account.forms.UserTokenForm',
+}
+
+ACCOUNT_PASSWORD_RESET_TOKEN_GENERATOR = "django.contrib.auth.tokens.PasswordResetTokenGenerator"
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'   #login method to use (=”username” | “email” | “username_email”)
 ACCOUNT_EMAIL_REQUIRED = True   #to login with email should be true
@@ -171,11 +183,15 @@ ACCOUNT_EMAIL_REQUIRED = True   #to login with email should be true
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'nirsavakili@gmail.com'
-EMAIL_HOST_PASSWORD = "********" 
+EMAIL_HOST_PASSWORD = "********"
 EMAIL_USE_TLS = True
 EMAIL_USE_LOCALTIME = False
 EMAIL_FILE_PATH = BASE_DIR / 'emails'
 ACCOUNT_EMAIL_VERIFICATION = 'none'  #none: dont send verification email/ mandatory: send verification email
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = "username"
+ACCOUNT_USER_MODEL_EMAIL_FIELD = "email"
 LOGIN_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
