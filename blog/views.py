@@ -64,6 +64,6 @@ def single_blog(request, post_id):
 def blog_search(request):
     posts = Post.objects.filter(status=True, published_date__lte=timezone.now())
     if request.method == 'GET':
-        posts = posts.filter(content__contains=request.GET.get('s'))
+        posts = posts.filter(title__contains=request.GET.get('s'))
     context = {'posts': posts}
     return render(request, 'blog/blog.html', context)

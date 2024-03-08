@@ -163,10 +163,19 @@ ROBOTS_USE_SCHEME_IN_HOST = True
 ROBOTS_SITEMAP_URLS = [
     'http://127.0.0.1:8000/sitemap.xml',
 ]
+
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'   #login method to use (=”username” | “email” | “username_email”)
+ACCOUNT_EMAIL_REQUIRED = True   #to login with email should be true
+#email information to sending verification/forgot password email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'nirsavakili@gmail.com'
+EMAIL_HOST_PASSWORD = "********" 
+EMAIL_USE_TLS = True
 EMAIL_USE_LOCALTIME = False
 EMAIL_FILE_PATH = BASE_DIR / 'emails'
-
+ACCOUNT_EMAIL_VERIFICATION = 'none'  #none: dont send verification email/ mandatory: send verification email
 LOGIN_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
