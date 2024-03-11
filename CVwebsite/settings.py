@@ -34,8 +34,18 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': '<your_secret_key>',
             'key': ''
         }
-    }
+    },
+    'google':
+        {'SCOPE': ['https://www.googleapis.com/auth/userinfo.profile'],
+         'AUTH_PARAMS': {'access_type': 'online'}}
 }
+TEMPLATE_CONTEXT_PROCESSORS = (
+
+    "django.core.context_processors.request",
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
+
+)
 
 AUTHENTICATION_BACKENDS = [
 
@@ -58,6 +68,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
     "widget_tweaks",
     'django.contrib.sitemaps',
     'django_extensions',
@@ -65,6 +76,9 @@ INSTALLED_APPS = [
     'taggit',
     'crispy_forms',
     'django_summernote',
+    'compressor',
+    "cssmin",
+    "jsmin",
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
     'blog.apps.BlogConfig',
@@ -176,23 +190,23 @@ ACCOUNT_FORMS = {
 }
 
 ACCOUNT_PASSWORD_RESET_TOKEN_GENERATOR = "django.contrib.auth.tokens.PasswordResetTokenGenerator"
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'   #login method to use (=”username” | “email” | “username_email”)
-ACCOUNT_EMAIL_REQUIRED = True   #to login with email should be true
-#email information to sending verification/forgot password email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # login method to use (=”username” | “email” | “username_email”)
+ACCOUNT_EMAIL_REQUIRED = True  # to login with email should be true
+# email information to sending verification/forgot password email
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'nirsavakili@gmail.com'
-EMAIL_HOST_PASSWORD = "********"
+EMAIL_HOST_PASSWORD = "***"
 EMAIL_USE_TLS = True
 EMAIL_USE_LOCALTIME = False
 EMAIL_FILE_PATH = BASE_DIR / 'emails'
-ACCOUNT_EMAIL_VERIFICATION = 'none'  #none: dont send verification email/ mandatory: send verification email
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # none: dont send verification email/ mandatory: send verification email
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = "username"
 ACCOUNT_USER_MODEL_EMAIL_FIELD = "email"
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'account_login'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -234,3 +248,15 @@ SUMMERNOTE_CONFIG = {
         ],
     },
 }
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+STATIC_DEPS = True
+COMPRESS_ENABLED = True
+COMPRESS_ROOT = STATIC_ROOT
+COMPRESS_OFFLINE = True
+COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
+COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
