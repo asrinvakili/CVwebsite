@@ -1,11 +1,9 @@
 from django.http import Http404
 from django.utils import timezone
-
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
-
 from blog.forms import CommentForm
 from blog.models import Post, Comment
-
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
@@ -39,6 +37,9 @@ def single_blog(request, post_id):
         form = CommentForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your Comment Sent Successfully')
+        else:
+            messages.error(request, 'There was an error, Please try again')
     else:
         form = CommentForm()
     posts = Post.objects.filter(status=True, published_date__lte=timezone.now())

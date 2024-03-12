@@ -26,5 +26,8 @@ def news_view(request):
         form = NewsLetterForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your Comment Sent Successfully')
             return HttpResponseRedirect('/')
+        else:
+            messages.error(request, 'There was an error, Please try again')
 

@@ -1,8 +1,5 @@
 from django.urls import reverse
-
 from django.contrib.sitemaps import Sitemap
-from django.utils import timezone
-from blog.models import Post
 
 
 class StaticViewSitemap(Sitemap):
