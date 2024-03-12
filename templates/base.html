@@ -9,8 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Asrin Vakili</title>
         {% compress css %}
-        <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
-        
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
@@ -21,6 +19,8 @@
         <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/popup/magnific-popup.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/flaticon/flaticon.css' %}">
+        {% endcompress %}
+        {% compress css %}   
         <!-- main css -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
@@ -128,7 +128,7 @@
                                     {% csrf_token %}
                                 	<div class="input-group d-flex flex-row">
                                         <label>
-                                            <input name="email"  required="" type="email">
+                                            <input name="email"  required="" type="email" autocomplete="Your Email">
                                         </label>
                                         <button type="submit"><span class="lnr lnr-arrow-right"></span></button>
                                     </div>

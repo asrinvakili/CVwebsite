@@ -1,5 +1,5 @@
 from django.urls import path
-from blog.feeds import LatestEntriesFeed
+
 from blog.views import blog, single_blog
 from blog.sitemap import BlogSitemap
 
@@ -12,6 +12,6 @@ urlpatterns = [
     path('category/<str:cat_name>/', blog, name='category'),
     path('author/<str:author_user>/', blog, name='author'),
     path('search/', blog, name='search'),
-    path('rss/feed/', LatestEntriesFeed()),
+
     path('tag/<str:tag_name>/', blog, name='tag'),
 ]
