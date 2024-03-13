@@ -43,9 +43,11 @@
                                 <div class="form-group">
                                     <label for="message"></label><textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
                                 </div>
-                            </div>
 
                             <div class="col-md-12 text-right">
+                                <div class="pb-3">
+                                {{form.captcha}}
+                                </div>
                                 <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
                             </div>
                         </form>

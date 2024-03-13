@@ -55,6 +55,7 @@ AUTHENTICATION_BACKENDS = [
 
 INSTALLED_APPS = [
 
+    'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,13 +64,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'django.contrib.sites',
-    "allauth_ui",
+    'captcha',
+    'allauth_ui',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
-    "widget_tweaks",
+    'widget_tweaks',
     'django.contrib.sitemaps',
     'django_extensions',
     'robots',
@@ -77,8 +79,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_summernote',
     'compressor',
-    "cssmin",
-    "jsmin",
+    'cssmin',
+    'jsmin',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
     'blog.apps.BlogConfig',
@@ -86,7 +88,9 @@ INSTALLED_APPS = [
 
 ]
 
+
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -265,3 +269,8 @@ COMPRESS_ROOT = STATIC_ROOT
 COMPRESS_OFFLINE = True
 COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
 COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
+
+
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
